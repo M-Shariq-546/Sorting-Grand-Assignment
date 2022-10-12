@@ -30,7 +30,7 @@ void printAll(int arr[] , int s)
         cout<<endl;
 }
 int main(){
-    int arr[] = {12 , 98 , 45 , 100 , 23 , 420 , 544 , 578 , 500 , 1002};
+    int arr[] = {5 , 4 , 6 , 0 , 4 , 5 , 2 , 2 , 6};
     int size = sizeof(arr)/sizeof(arr[0]);
     bubble(arr , size);
     printAll(arr, size);
