@@ -2,8 +2,8 @@
 using namespace std;
 void count(int arr[] , int s)
 {
-    int out[10];
-    int newarr[10];
+    int out[s];
+    int newarr[s];
     //Assuming the largest value at start
     int largest = arr[0];
 
@@ -17,7 +17,7 @@ void count(int arr[] , int s)
         }
     }
 
-    //New array Initializing
+    //New array Initializing till the largest value's index
     for(int i=0 ; i<=largest ; i++)
     {
         newarr[i] = 0;
@@ -29,7 +29,7 @@ void count(int arr[] , int s)
         newarr[arr[i]]++;
     }
 
-    //Sum of previous and current index counts
+    //Sum of previous and current index counts till largest value's index
     for(int i=1 ; i<=largest ; i++)
     {
         newarr[i] += newarr[i-1];
