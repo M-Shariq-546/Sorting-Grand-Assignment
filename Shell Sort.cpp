@@ -6,11 +6,14 @@ using namespace std;
 // Shell sort
 void shellSort(int arr[], int s) {
   // Rearrange elements at each n/2, n/4, n/8, ... intervals
-  for (int interval = s / 2; interval > 0; interval /= 2) {
-    for (int i = interval; i < s; i += 1) {
+  for (int interval = s / 2; interval > 0; interval /= 2)
+  {
+    for (int i = interval; i < s; i++)
+    {
       int temp = arr[i];
       int j;
-      for (j = i; j >= interval && arr[j - interval] > temp; j -= interval) {
+      for (j = i; j >= interval && arr[j - interval] > temp; j -= interval)
+      {
         arr[j] = arr[j - interval];
       }
       arr[j] = temp;
@@ -25,7 +28,6 @@ void printArray(int arr[], int s) {
     cout << arr[i] << " ";
   cout << endl;
 }
-
 // Driver code
 int main() {
   int arr[] = {9, 8, 3, 7, 5, 6, 4, 1};
